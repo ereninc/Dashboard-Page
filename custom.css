@@ -1,0 +1,238 @@
+:root {
+  --sideBar: #f8f8ff;
+  --white: #ffffff;
+  --orange-bar: #ee4d38;
+  --orange-text: #ee6338;
+  --dark-blue: #1a194d;
+  --purplish: #7e7da5;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+
+  height: 100vh;
+  display: flex;
+  background: linear-gradient(-45deg, #f8f8ff, var(--white));
+  color: var(--purplish);
+}
+
+/* SideBar */
+
+.sidebar {
+  height: 100%;
+  width: 260px;
+  flex-shrink: 0;
+  background-color: var(--sideBar);
+  padding: 48px;
+  color: var(--purplish);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 48px;
+}
+
+.profile-body h2 {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--dark-blue);
+  margin-bottom: 4px;
+}
+
+.profile-image {
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+nav .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* yukari, sag, asagi, sol */
+  padding: 8px 16px 8px 0px;
+}
+
+nav .nav-item.active {
+  color: var(--dark-blue);
+  position: relative;
+}
+
+nav .nav-item.active::before {
+  content: "";
+  display: block;
+  width: 6px;
+  position: absolute;
+  border-radius: 24px;
+  background-color: var(--orange-bar);
+  left: -16px;
+  top: 0;
+  bottom: 0;
+}
+
+nav .nav-item:last-child {
+  margin-top: auto;
+}
+
+/* Main */
+main {
+  height: 100%;
+  flex: 1;
+  padding: 64px 72px;
+}
+
+main h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: var(--dark-blue);
+}
+
+.main-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+/* Left Wrapper */
+
+.main-left-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  flex: 1;
+}
+
+.main-left-wrapper .section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.main-left-wrapper .section-description {
+  margin-top: 12px;
+  margin-bottom: 48px;
+}
+
+.main-left-wrapper .table {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.main-left-wrapper .table:first-child {
+  color: var(--purplish);
+}
+
+.main-left-wrapper .table .row {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin-left: -16px;
+  font-size: 16px;
+  color: var(--dark-blue);
+}
+
+.main-left-wrapper .table .row .column {
+  flex: 1;
+}
+
+.main-left-wrapper .table .row .column h2 {
+  font-size: 14px;
+  color: var(--dark-blue);
+}
+
+.main-left-wrapper #order-history a {
+  color: var(--orange-bar);
+  text-decoration: underline;
+  margin-top: 8px;
+}
+
+.main-left-wrapper .table .row .column button {
+  border: 1px solid var(--purplish);
+  color: var(--dark-blue);
+  border-radius: 8px;
+  padding: 8px;
+  width: 114px;
+  height: 40px;
+}
+
+.table .row.active {
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+/* Right Wrapper */
+
+.main-right-wrapper {
+  background-color: var(--orange-bar);
+  width: 258px;
+  height: 221px;
+  border-radius: 16px;
+  padding: 32px;
+  color: var(--white);
+  border-radius: 16px;
+}
+
+.main-right-wrapper h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.main-right-wrapper .plan-desc {
+  font-size: 16px;
+  line-height: auto;
+}
+
+.main-right-wrapper .renew-date {
+  font-size: 14px;
+}
+
+.main-right-wrapper button {
+  font-size: 16px;
+  border: 1px solid var(--white);
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-top: 24px;
+  width: 194px;
+  height: 40px;
+}
+
+#payment-method .card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+#payment-method .card-content p {
+  color: rgb(31, 31, 31);
+  font-weight: 700;
+  flex: 1;
+}
+
+#payment-method .card-content button {
+  border: 1px solid #cacaca;
+  border-radius: 8px;
+  padding: 8px;
+  width: 96px;
+  height: 40px;
+  margin-right: auto;
+  font-weight: 700;
+  color: rgb(31, 31, 31);
+}
